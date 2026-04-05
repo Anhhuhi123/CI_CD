@@ -10,7 +10,6 @@ cap = None
 camera_active = False
 lock = threading.Lock()
 branch_1 = None
-branch_2 = None
 
 @router.get("/video_feed")
 async def video_feed():
