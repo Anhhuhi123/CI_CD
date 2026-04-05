@@ -39,29 +39,6 @@ class FaceRecognition:
 
         return known_encodings, known_names
 
-    # def recognize_faces(self, frame):
-    #     small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
-    #     rgb_small_frame = small_frame[:, :, ::-1]
-    #     face_locations = face_recognition.face_locations(rgb_small_frame)
-    #     face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
-
-    #     face_names = []
-
-    #     for face_encoding in face_encodings:
-    #         matches = face_recognition.compare_faces(self.known_encodings, face_encoding)
-    #         face_distances = face_recognition.face_distance(self.known_encodings, face_encoding)
-
-    #         name = "Unknown"
-    #         confidence = "Unknown"
-
-    #         if len(face_distances) > 0:
-    #             best_match_index = np.argmin(face_distances)
-    #             if matches[best_match_index]:
-    #                 name = self.known_names[best_match_index]
-    #                 confidence = face_confidence(face_distances[best_match_index])
-
-    #         face_names.append(f"{name} ({confidence})")
-
     #     return face_names
     def recognize_faces(self, frame):
         rgb_small_frame = frame[:, :, ::-1]
