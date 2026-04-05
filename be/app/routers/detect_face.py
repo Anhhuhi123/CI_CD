@@ -12,7 +12,6 @@ import asyncio
 router = APIRouter()
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-cascade_path = os.path.join(current_dir, 'haarcascade_frontalface_default.xml')
 
 cam = None
 camera_lock = Lock()
