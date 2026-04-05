@@ -2,7 +2,6 @@ from fastapi import APIRouter
 from config.database import get_database
 from app.models.users import User
 db = get_database()
-router = APIRouter()
 
 
 @router.post("/auth/login", status_code=200)
