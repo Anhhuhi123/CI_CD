@@ -9,6 +9,8 @@ router = APIRouter()
 cap = None
 camera_active = False
 lock = threading.Lock()
+branch_1 = None
+branch_2 = None
 
 def generate_frames():
     global cap, camera_active
