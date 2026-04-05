@@ -7,14 +7,12 @@ import os
 import numpy as np
 import math
 import sys
-import asyncio
 
 router = APIRouter()
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 camera_lock = Lock()
-face_detector = cv2.CascadeClassifier(cascade_path)
 capture_active = False
 capture_done = False  # Thêm biến báo đã chụp đủ 30 ảnh
 
