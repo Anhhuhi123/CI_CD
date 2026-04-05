@@ -13,36 +13,6 @@ router = APIRouter()
 # ----------------------Nhận diện khuôn mặt----------------------
 known_faces_cache = {}
 
-def face_confidence(face_distance, face_match_threshold=0.6):
-    range = (1.0 - face_match_threshold)
-    linear_value = (1.0 - face_distance) / (range * 2.0)
-
-    if face_distance > face_match_threshold:
-        return str(round(linear_value * 100, 2)) + "%"
-    else:
-        value = (linear_value + ((1.0 - linear_value) * math.pow((linear_value - 0.5) * 2, 0.2))) * 100
-        return str(round(value, 2)) + "%"
-
-def load_known_faces(face_id: str):
-    known_encodings = []
-    known_names = []
-
-    folder_path = f"dataset/detect_face/{face_id}"
-    if not os.path.exists(folder_path):
-        print(f"⚠️ Folder {folder_path} không tồn tại.")
-        return known_encodings, known_names
-
-    for filename in os.listdir(folder_path):
-        image_path = os.path.join(folder_path, filename)
-        print(f"📥 Loading image: {image_path}")
-        image = face_recognition.load_image_file(image_path)
-        encodings = face_recognition.face_encodings(image)
-
-        if encodings:
-            known_encodings.append(encodings[0])
-            known_names.append(filename)
-
-    return known_encodings, known_names
 class FaceRecognition:
     def __init__(self, face_id: str):
         self.face_id = face_id
