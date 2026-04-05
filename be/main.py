@@ -6,7 +6,6 @@ from app.routers import face_recognize
 from app.routers import camera
 from app.routers import auth
 from pymongo import MongoClient
-# from config.database import db
 
 app = FastAPI()
 
