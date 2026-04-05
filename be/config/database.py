@@ -1,9 +1,7 @@
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure
-from dotenv import load_dotenv
 import os
 
-load_dotenv()  # Load biến môi trường từ .env
 
 def get_database():
     uri = os.getenv("MONGODB_URI")
