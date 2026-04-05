@@ -62,4 +62,4 @@ docker build -t fastapi-ci-demo:local .
 docker run --rm -p 8000:8000 fastapi-ci-demo:local
 ```
 
-test CICD
+Dung cac buoc tren de test CI/CD workflow va xac minh ung dung chay duoc ca local lan Docker.
