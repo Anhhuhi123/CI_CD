@@ -100,9 +100,6 @@ async def ws_face_recognition(websocket: WebSocket, face_id: str):
             data = await websocket.receive_bytes()
 
             img = Image.open(BytesIO(data))
-            # img_rgb = img.convert("RGB")
-            # img_rgb.save("/Users/macbook/Desktop/PBL5/PBL5/be/debug/debug_after_rgb.jpg")
-            # img.save("/Users/macbook/Desktop/PBL5/PBL5/be/debug/debug2.jpg")
 
             frame = np.array(img.convert("RGB"))
 
