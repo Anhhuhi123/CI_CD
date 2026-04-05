@@ -19,15 +19,3 @@ async def login(user: User):
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid credentials"
         )
-
-@router.post("/auth/register", status_code=201)
-async def register(user: User):
-    username = user.username
-    password = user.password
-
-    existing_user = db.users.find_one({"username": username})
-    if existing_user:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Username already exists"
-        )
