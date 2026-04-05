@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
-import cv2
 from app.routers import detect_face
 from app.routers import face_recognize
 from app.routers import camera
