@@ -10,7 +10,6 @@ cap = None
 camera_active = False
 lock = threading.Lock()
 branch_1 = None
-branch_2 = None
 
 @router.get("/video_feed")
 async def video_feed():
@@ -24,12 +23,4 @@ async def video_feed():
         time.sleep(1)
     return StreamingResponse(generate_frames(), media_type="multipart/x-mixed-replace; boundary=frame")
 
-@router.get("/stop_camera")
-async def stop_camera():
-    global cap, camera_active
-    with lock:
-        camera_active = False
-        if cap:
-            cap.release()
-            cap = None
-    return {"message": "Camera stopped"}
+
