@@ -1,7 +1,6 @@
 from fastapi import APIRouter
 from config.database import get_database
 from app.models.users import User
-from fastapi import HTTPException, status
 db = get_database()
 router = APIRouter()
 
