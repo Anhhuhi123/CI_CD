@@ -12,7 +12,6 @@ router = APIRouter()
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-cam = None
 camera_lock = Lock()
 capture_active = False
 capture_done = False  # Thêm biến báo đã chụp đủ 30 ảnh
