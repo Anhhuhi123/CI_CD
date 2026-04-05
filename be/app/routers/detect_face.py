@@ -13,7 +13,6 @@ router = APIRouter()
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-cam = None
 camera_lock = Lock()
 face_detector = cv2.CascadeClassifier(cascade_path)
 capture_active = False
