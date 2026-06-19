@@ -2,11 +2,7 @@
 
 Repo demo toi gian de hoc va test CI voi GitHub Actions.
 
-<<<<<<< HEAD
-## 1) Chay lo
-=======
 ## 1) Chay local123
->>>>>>> 4b41b90 (test rebase)
 
 ```bash
 python3 -m venv .venv
