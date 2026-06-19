@@ -1,9 +1,9 @@
-FROM python:3.11-
+FROM python:3.11-slim123
 
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements
+RUN pip install --no-cache-dir -r requirements.123
 
 COPY app ./app
 
