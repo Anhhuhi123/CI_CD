@@ -2,7 +2,7 @@
 
 Repo demo toi gian de hoc va test CI voi GitHub Actions.
 
-## 1) Chay local
+## 1) Chay lo
 
 ```bash
 python3 -m venv .venv
