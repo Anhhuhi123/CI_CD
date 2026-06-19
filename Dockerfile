@@ -1,6 +1,6 @@
-FROM python:3.11-main
+FROM python:3.11-456
 
-WORKDIR /app-anh
+WORKDIR /app-123
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements
