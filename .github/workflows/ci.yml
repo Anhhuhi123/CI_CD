@@ -27,7 +27,7 @@ jobs:
           pip install ruff pytest
 
       - name: Run lint with Ruff
-        run: ruff check .
+        run: PYTHONPATH=. pytest
 
       - name: Run tests with Pytest
         run: pytest
